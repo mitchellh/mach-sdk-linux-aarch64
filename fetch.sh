@@ -49,7 +49,7 @@ done
 
 # Remove files that are not useful as part of the SDK.
 rm -rf root/usr/share/man
-rm -rf root/usr/lib/x86_64-linux-gnu/pkgconfig
+rm -rf root/usr/lib/aarch64-linux-gnu/pkgconfig
 rm -rf root/usr/share/bug
 rm -rf root/usr/share/wayland
 rm -rf root/usr/share/pkgconfig
@@ -58,7 +58,7 @@ find root/usr/share/doc -type f -not -name 'copyright' | xargs rm -rf --
 find root/usr/share/doc | grep changelog.Debian.gz | xargs rm --
 
 # Eliminate symlinks, which are difficult to use on Windows.
-pushd root/usr/lib/x86_64-linux-gnu
+pushd root/usr/lib/aarch64-linux-gnu
 
 rm libX11.so libX11.so.6
 mv libX11.so.6.3.0 libX11.so
